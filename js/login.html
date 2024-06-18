@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page</title>
+    <style>
+        @import url('https://fonts.cdnfonts.com/css/gagalin');
+        @font-face {
+        font-family: 'Gagalin';
+        src: url('path/to/gagalin.ttf') format('truetype');
+        }
+
+        .container { 
+        height: 150px;
+        position: relative;
+        }
+        footer{
+        color: white;
+        border: 3px solid white;
+        margin-top: 20px;
+        background-color: orangered;
+        /* height: 30px; */
+        border-radius: 12px;
+        padding: 0;
+        padding-top: 20px;
+
+        display: flex;
+        }
+        .center {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 20%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+
+        }
+        
+        body{
+            background-color: black;
+            color: white;
+            margin-top: 45%;
+            margin-left: 20%;
+            margin-right: 30%;
+            font-style: normal;
+            font-family: 'Gagalin', sans-serif;
+            background-image: url(images/main.png);
+    
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div id = "image" style="margin-top:-80%;">
+ 
+    </div>
+    
+    <form id = "login" style="border: 5PX SOLID rgb(246, 106, 24);;background-color: black;border-radius: 30px;width:600px;text-align: center;margin-left: 25%;">
+    <div>
+    <img src="/images/logo.jpg" style="margin-top: 50px;" alt="image">
+    <div id = "form">
+
+    <label for = "Email" style="margin-right: 20px;">Email ID:</label>
+    <input type = "email" id = "Email" name = "Email" style = "border-radius: 25px;
+    border: 2px solid rgb(9, 9, 9);
+    padding: 20px; 
+    width: 210px;
+    height: 5px;">
+    <br><br>
+
+    <label for = "Password">Password:</label>
+    <input type = "Password" id = "Password" name = "Password" style = "border-radius: 25px;
+    border: 2px solid rgb(9, 9, 9);
+    padding: 20px; 
+    width: 200px;
+    height: 5px;">
+    <br><br>
+
+    <div class="container">
+        <div class="center">
+            <input type = "submit" value = "Login" style = "text-align: center;
+            position: relative;
+            border-radius: 1px;
+            border: 2px solid rgb(9, 9, 9);
+         
+            width: 200px;
+            margin-left:400px;
+           border-radius: 30px;
+            height: 50px;
+            color: rgb(255, 129, 2);
+            font-size: 20px;
+            font-family: 'Gagalin';
+            background-color: rgb(246, 106, 24);
+            color: white;">
+        </div>
+    </div>
+    <p >Create an account?? <a href="signup.html">SIGN IN</a></p>
+    </div>
+</div>
+
+    </form>
+
+
+    <script>
+        document.getElementById("login").onsubmit = function(event){
+            event.preventDefault();
+        
+            var email = document.getElementById("Email").value;
+
+            var emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+            if (!email.match(emailRegex)) {
+                alert("Please enter a valid email address.");
+                return;
+            }
+        }
+
+</script>
+
+</body>
+</html>
+
+
+
+
+

@@ -1,0 +1,212 @@
+@import url('https://fonts.cdnfonts.com/css/gagalin');
+@font-face {
+  font-family: 'Gagalin';
+  src: url('path/to/gagalin.ttf') format('truetype');
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+background-color: rgb(230, 244, 243);
+    color: black;
+
+    font-family: 'Gagalin', sans-serif; /* Use the font for the body */
+  
+}
+.bodytab{
+  width: 90%;
+  margin-left: 5%;
+}
+#myNavbar{
+  position: fixed;
+  width: 90%;
+  height: 62px;
+  text-decoration: none;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.406);
+  font-weight: bolder;
+  z-index: 1;
+}
+
+
+ul{
+  list-style: none;
+}
+.explore{
+  position: absolute;
+  font-family: Arial, sans-serif;
+  font-size: 2em;
+  padding-top: 10%;
+  padding-left: 1%;
+  font-weight: bolder;
+  color:rgb(255, 255, 255);
+  font-size:20px;
+}
+.title{
+  color:black; 
+  font-family: 'Gagalin', sans-serif;
+  font-weight: bolder;
+  font-size: 50px;
+  margin-left: -50%;
+
+
+
+}
+.title span{
+}
+@keyframes rainbowBorder {
+  0% { border-color: red; }
+  20% { border-color: orange; }
+  40% { border-color: yellow; }
+  60% { border-color: green; }
+  80% { border-color: blue; }
+  100% { border-color: violet; }
+}
+.button {
+  background-color: #3498db00; 
+  color: black; 
+  padding: 15px 30px; 
+  font-family: 'Gagalin', sans-serif;
+  border:3px solid rgb(0, 0, 0);
+  border-color: violet;
+  border-radius: 30px;
+  align-self: center;
+  margin-left: 15%;
+  font-size: 20px; 
+  font-weight: bolder; 
+}
+img { animation: fadeIn 5s; }
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  30% { opacity: 1; }
+}
+.explore span {
+  color: #28a745;
+  font-size: 60px;
+  margin: 0 auto;
+}
+@keyframes background_color {
+  0% { background: linear-gradient(to right, rgb(80, 187, 223), violet); }
+  50% { background: linear-gradient(to right, rgb(9, 63, 145), rgb(123, 14, 123)); }
+  100% { background: linear-gradient(to right, rgb(199, 64, 185), rgb(34, 100, 145)); }
+}
+
+.who {
+  background-color: white;
+}
+.whoimage:hover {
+  transform: scale(1.1);
+}
+
+.medium{
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+
+.right-nav{
+  padding: 8px 10px;
+  float: right;
+
+
+}
+
+
+div.container{
+  font-family: Raleway;
+  margin: 0 auto;
+padding: 6px 3em;
+text-align: center;
+}
+.navlogo{
+  width: 110px;
+  height: 100px;
+  border-radius: 50px;
+  margin-top: -25px;
+  margin-left: -80px;
+}
+
+div.container a
+{
+  color: #000;
+  text-decoration: none;
+  margin: 0px 20px;
+  padding: 5px 5px;
+  position: relative;
+}
+
+.about{
+  width:95%;
+  margin-left: 2.5%;
+  height: 85vh;
+  border: 3px solid black;
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: background_image 10s infinite;
+}
+@keyframes background_image {
+  0%{background-image: url(../images/freelance-work-for-free-quotes-01.jpg);}
+  50%{background-image: url(../images/freelance-work-for-free-quotes-02.jpg);}
+  100%{background-image: url(../images/freelance-work-for-free-quotes-03.jpg);}
+  
+}
+footer{
+  color: white;
+  text-align: center;
+}
+.vacancies-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Styling for the individual cards */
+.vacancy-card {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 10px;
+  
+  width: 300px;
+  height: 100px;
+  margin:5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.322);
+}
+.job-card {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 10px;
+  width: 96%;
+  height: 80px;
+  margin:5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.322);
+}
+.job-card div{
+  background-color: #fff;
+  width: 30%;
+  margin:5px;
+
+
+}
+
+/* Styling for the card headings */
+.card-heading {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Styling for the card statistics */
+.card-statistics {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.card-statistics li {
+  margin-bottom: 5px;
+}
+h1{
+  color: green;
+  font-size: 50px;
+  margin-left: 20%;
+}

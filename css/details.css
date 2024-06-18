@@ -1,0 +1,103 @@
+.cardtitle{
+    border: 2px solid black;
+    height: 150px;
+    font-size: xx-large;
+    font-weight: bolder;
+    text-align: center;
+}
+.banner img{
+    border: 2px solid black;
+    height: 400px;
+    width: 99.9%;
+
+
+}
+
+.desc{
+    border: 2px solid black;
+
+    font-size: x-large;
+}
+.right{
+    padding: 10px;
+}
+.right div img{
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+}
+.right div{
+    text-align: center;
+}
+.details{
+    font-size: large;
+    font-weight: bold;
+
+}
+
+.pdf {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+}
+
+.pdf,
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+h1,
+h3 {
+    text-align: center;
+}
+
+h1 {
+    color: green;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+input[type="text"], input[type="email"] {
+    width: 50%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.btn:hover {
+    background-color: #0056b3;
+}
+.li{
+    margin-top: 30px;
+    font-size: medium; 
+    font-weight: bold;
+}
+.li::before{ 
+    content: '> ';
+    color: green; 
+} 
+p{
+    margin: 20px;
+}

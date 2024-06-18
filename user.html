@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Seeker Registration</title>
+    <style>
+   /* Resetting default browser styles */
+   * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #54a0ff, #acb6e5);
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        /* Container styles */
+        .container {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            width: 600px;
+            max-width: 100%;
+            margin: auto;
+        }
+
+        /* Form styles */
+        .form-title {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+            font-size: 16px;
+        }
+
+        .form-input,
+        .form-textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .form-textarea {
+            resize: vertical; /* Allow vertical resizing */
+        }
+
+        .file-upload-label {
+            display: block;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+            color: #007bff;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .file-upload-label:hover {
+            background-color: #e0e0e0;
+        }
+
+        .file-upload-input {
+            display: none; /* Hide the actual input */
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-submit:hover {
+            background-color: #0056b3; /* Darken the color on hover */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="./php/freelancer_register.php" class="form" method="post" enctype="multipart/form-data">
+            <h1 class="form-title">Job Seeker Registration</h1>
+            <div class="form-group">
+                <img id="profile-pic" src="./images/219970.png" style="width: 200px; margin-left: 32%;" alt="">
+                <input type="file" id="profile_image" name="profile_image">
+            </div>
+            <div class="form-group">
+                <label for="Username" class="form-label">Name:</label>
+                <input type="text" id="Username" name="Username" class="form-input" required>
+            </div>
+            <div class="form-group">
+                <label for="Email" class="form-label">Email:</label>
+                <input type="email" id="Email" name="Email" class="form-input" required>
+            </div>
+            <div class="form-group">
+                <label for="Password" class="form-label">Password:</label>
+                <input type="password" id="Password" name="Password" class="form-input" required>
+            </div>
+            <div class="form-group">
+                <label for="bio" class="form-label">Bio:</label>
+                <textarea id="bio" name="bio" rows="5" class="form-textarea">Enter your bio...</textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn-submit">Register</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("registration-form").onsubmit = function(event){
+            // Commenting out this code to let form submit normally
+            // event.preventDefault();
+            
+            var email = document.getElementById("Email").value;
+            var emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+            
+            if (!email.match(emailRegex)) {
+                alert("Please enter a valid email address.");
+                return;
+            }
+        }
+
+        let inputFile = document.getElementById("profile_image");
+        inputFile.onchange = function(){
+            let profilePic = document.getElementById("profile-pic");
+            profilePic.src = URL.createObjectURL(inputFile.files[0]);
+        }
+    </script>
+    
+</body>
+</html>
